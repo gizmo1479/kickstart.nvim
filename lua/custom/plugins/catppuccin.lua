@@ -13,6 +13,7 @@ return {
 				cmp = true,
 				gitsigns = true,
 				nvimtree = true,
+				harpoon = true,
 			},
 		})
 		vim.cmd.colorscheme 'catppuccin'

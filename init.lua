@@ -170,6 +170,7 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
       },
+      extensions = { 'trouble' }
     },
   },
 
@@ -285,6 +286,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 
 -- [[ Personal Keymaps ]]
+
 
 -- go to the directory view / exit current buffer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
@@ -496,12 +498,11 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
   -- pyright = {},
-  -- rust_analyzer = {},
-  -- tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+  rust_analyzer = {},
+  html = { filetypes = { 'html', 'twig', 'hbs' } },
 
   lua_ls = {
     Lua = {
